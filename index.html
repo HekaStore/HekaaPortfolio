@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Element -->
+     <div class="elementBox">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+     </div>
+
+    <header id="nav">
+
+        
+            <div class="judul" id="judul-header">
+                <div class="menu-nav">
+                    <div class="horizon"></div>
+                    <div class="horizon"></div>
+                    <div class="horizon"></div>
+                </div>
+                <div class="nama-web">
+                    <h1>HEKA</h1>
+                </div>
+                
+            </div>
+
+            <div class="navigasi">
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="services.html">Services</a>
+                <a href="blog.html">Blog</a>
+            </div>
+
+            <div class="count-text">
+                <p id="demo"></p>
+            </div>
+        
+
+    </header>
+
+    <main>
+
+        <div class="container-main">
+            <div class="isi-main">
+
+                <div class="profil">
+
+                    <div class="pp-gambar">
+                        <div class="gambar">
+
+                            <img src="css/img/cat-logo.png" alt="foto-admin" height="256" width="256">
+                        </div>
+
+                        <div class="nama">
+                            <p>Novemas Heka Alfarizi</p>
+                            <p></p>
+                        </div>
+                        
+                    </div>
+                    <!-- deskripsi-profil -->
+
+                        <div class="deskripsi-profil">
+                            <p>Hai! Aku adalah anak yang suka dengan teknologi. Perkenalkan namaku Novemas Heka Alfarizi umur 17 tahun. Aku lahir pada keluarga yang sederhana, dan aku juga melakukan banyak hal meskipun tidak ada yang dipelajari secara mendalam.</p>
+
+                            <div class="sosial-media">
+                                <p>Follow My Sosial Media </p>
+                            </div>
+                        </div>
+                </div>
+
+                
+
+            </div>
+            
+        </div>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("#button").click(function() {
+                $(".navigasi").animate({width : "toggle"});
+            });
+        })
+    </script>
+    
+</body>
+</html>
