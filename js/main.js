@@ -14,7 +14,7 @@ function Headers() {
 
         
     } else {
-        nav.style.position = "fixed";
+        nav.style.position = "relative";
         nav.style.height = "100px";
         judulHeader.style.fontSize = "2rem"
     }
