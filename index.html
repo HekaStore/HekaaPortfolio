@@ -19,10 +19,13 @@
      </div>
 
     <header id="nav">
+        <div class="side-bar" id="headerSide">
+
+        </div>
 
         
             <div class="judul" id="judul-header">
-                <div class="menu-nav">
+                <div class="menu-nav" id="sideBar">
                     <div class="horizon"></div>
                     <div class="horizon"></div>
                     <div class="horizon"></div>
@@ -53,11 +56,31 @@
             <div class="isi-main">
 
                 <div class="profil">
-
+                    <!-- nama saya -->
                     <div class="novemasHeka">
-
+                        <div class="myname">
+                            <h1>Hey There </h1>
+                            <h1>i'm Hekaa <span style="border: 2px solid red;">.</span><span class="ketikan"></span></h1>
+                        </div>
+                        
+                         <div class="sosial-media">
+                                <p >Follow My Sosial Media </p>
+                                <div class="youtube">
+                                    <img src="css/img/sosmed/youtube.png" alt="" height="16" width="16">
+                                    <a href="#" class="sosmed"> &ensp;@Novemas12</a>
+                                </div>
+                                <div class="ig">
+                                    <img src="css/img/sosmed/instagram.png" alt="" height="16" width="16">
+                                    <a href="#" class="sosmed">&ensp;@novemasid1125</a>
+                                </div>
+                                <div class="facebook">
+                                    <img src="css/img/sosmed/facebook.png" alt="" height="16" width="16">
+                                    <a href="#" class="sosmed">&ensp;@novemas</a>
+                                </div>
+                            </div>
                     </div>
                     <!-- FOTO SAYA -->
+                     
                     <div class="pp-gambar">
                         <div class="gambar">
 
@@ -73,18 +96,21 @@
                     <!-- deskripsi-profil -->
 
                         <div class="deskripsi-profil">
-                            <p>Hai! Aku adalah anak yang suka dengan teknologi. Perkenalkan namaku Novemas Heka Alfarizi umur 17 tahun. Aku lahir pada keluarga yang sederhana, dan aku juga melakukan banyak hal meskipun tidak ada yang dipelajari secara mendalam.</p>
+                            <p>INTRODUCTION</p>
+                            <h1>UI/UX DESIGN,</h1>
+                            <h1>WEB DEVELOPMENT</h1>
+                            <p>Hai! Aku adalah anak yang suka dengan teknologi. 
+                                Perkenalkan namaku Novemas Heka Alfarizi umur 17 tahun.
+                                 Aku lahir pada keluarga yang sederhana, 
+                                 dan aku juga melakukan banyak hal meskipun tidak ada yang dipelajari secara mendalam.
+                                </p>
 
-                            <div class="sosial-media">
-                                <p>Follow My Sosial Media </p>
-                            </div>
                         </div>
+
                 </div>
 
                 
-
             </div>
-            
         </div>
 
     </main>
@@ -98,9 +124,9 @@
 
     <script>
         $(document).ready(function() {
-            $("#button").click(function() {
-                $(".navigasi").animate({width : "toggle"});
-            });
+            $("#sideBar").click(function() {
+                $("#headerSide").animate({width :"300px"})
+            })
         })
     </script>
     

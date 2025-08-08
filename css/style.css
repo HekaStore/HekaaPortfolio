@@ -7,6 +7,10 @@
     font-family: jetbrains;
     src: url(font/JetBrainsMonoNL-Regular.ttf);
 }
+@font-face {
+    font-family: lato;
+    src: url(font/Lato-Regular.ttf);
+}
 body {
     height: auto;
     width: auto;
@@ -79,11 +83,15 @@ header {
     top: 0;
     display: flex;
     justify-content: space-between;
-    border:  2px solid blue;
     transition: .5s;
     height: 100px;
 }
-
+.side-bar {
+    height: 100vh;
+    background-color: skyblue;
+    position: fixed;
+    z-index: 999;
+}
 .menu-nav {
     display: flex;
     justify-content: center;
@@ -93,6 +101,8 @@ header {
     height: 50px;
     width: 50px;
     cursor: pointer;
+    border: 2px solid red;
+    margin-right:  10px;
 }
 .menu-nav > div {
     height: 5px;
@@ -100,6 +110,18 @@ header {
     width: 30px;
     background-color: black;
     border-radius: 10px;
+    transition: .3s;
+}
+.menu-nav:hover .horizon:nth-child(1) {
+    transform: rotate(-45deg) translateX(-6px) translateY(-2px);
+
+    width: 20px;
+    
+}
+.menu-nav:hover .horizon:nth-child(3) {
+    transform: rotate(45deg) translateX(-6px) translateY(2px);
+    width: 20px;
+    
 }
 .judul {
     display: flex;
@@ -129,7 +151,6 @@ header {
     font-family: jetbrains;
     font-weight: bold;
 
-    border: 2px solid red;
     font-size: 1rem;
     color: rgb(44, 45, 46);
 
@@ -175,7 +196,7 @@ header {
     align-items: center;
     width: 300px;
     height: 300px;
-    border: 2px solid red;
+
 }
 .gambar {
     background-color: rgb(255, 230, 0);
@@ -184,6 +205,15 @@ header {
 .nama > p {
     font-weight: bold;
 
+}
+.ketikan {
+    height: 35px;
+    position: absolute;
+    width: 5px ;
+    background-color: black;
+    display: inline-block;
+    animation: blink .8s infinite ease-in-out;
+    border-radius: 2px;
 }
 .profil {
     display: flex;
@@ -194,7 +224,39 @@ header {
 }
 .deskripsi-profil {
     border: 2px solid red;
-    width: 500px;
+    width: 450px;
+    height: 300px;
+    display: flex;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.novemasHeka {
+    border: 2px solid blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 300px;
+    width: 400px;
+
+}
+.sosial-media {
+    position: relative;
+}
+.youtube , .ig, .facebook {
+    display: flex;
+    border: 2px solid;
+    padding: 5px;
+    margin: 5px;
+    
+}
+.sosmed {
+    color: black;
+    font-size: small;
+    text-decoration: none;
+
 }
 @keyframes melayang {
     0% {
@@ -220,10 +282,22 @@ header {
     
 }
 
-@media screen and (min-width: 500px) {
-    .menu-nav {
-        display: none;
+@keyframes blink {
+    0% {
+        opacity: 0%;
     }
+    50% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    /* .menu-nav {
+        display: none;
+    } */
     
 }
 @media screen and (max-width : 500px) {
