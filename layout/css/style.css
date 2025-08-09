@@ -77,7 +77,7 @@ body {
 
 /* navigasi */
 header {
-    position: absolute;
+    position: relative;
     left: 0;
     width: 100%;
     top: 0;
@@ -88,9 +88,18 @@ header {
 }
 .side-bar {
     height: 100vh;
-    background-color: skyblue;
+    background-color: yellow;
     position: fixed;
-    z-index: 999;
+    z-index: 2;
+}
+#latarHitam {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    display: none;
+    background-color: black;
+    opacity: 30%;
 }
 .menu-nav {
     display: flex;
@@ -101,7 +110,6 @@ header {
     height: 50px;
     width: 50px;
     cursor: pointer;
-    border: 2px solid red;
     margin-right:  10px;
 }
 .menu-nav > div {
@@ -142,7 +150,6 @@ header {
     justify-content: center;
     align-items: center;
 
-    border: 2px solid blue;
 
 
 }
@@ -162,7 +169,6 @@ header {
     width: 100px;
     right: 0;
     top: 100px;
-    border: 2px solid yellow;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -199,55 +205,149 @@ header {
 
 }
 .gambar {
-    background-color: rgb(255, 230, 0);
-    border-radius: 50%;
+    
+    height: 640px;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    width: 500px;
+    width: 500px;
+
+
+    
 }
-.nama > p {
+.gambar img:nth-child(1)  {
+    position: absolute;
+    z-index: -9;
+    opacity: 50%;
+     animation: fadeUpBG 2s ease;
+}
+.gambar img:nth-child(2)  {
+     animation: fadeUp 1.7s ease;
+}
+.gambar img:nth-child(3)  {
+     animation: fadeUpBG 1.7s ease;
+     position: absolute;
+     margin-top: -300px;
+     margin-left: -500px;
+     border-radius: 10px;
+     z-index: -9;
+     rotate: -20deg;
+     opacity: 50%;
+     box-shadow: 10px 0px 10px black;
+}
+
+
+.nama {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    
+    margin-top: 400px;
+    margin-left: 50px;
+    height: 200px;
+    width: 400px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    animation: fadeUp 2s ease;
+    
+    
+}
+.a2 {
+    opacity: 0%;
+    transition: .5s;
+}
+.h, .e,.k,.a {
+    transition: .5s;
+    opacity:  50%;
+    
+}
+
+.nama:hover .h {
+    
+    transform: translateX(-200px) translateY(150px);
+    opacity: 100%;
+    
+}
+.nama:hover .e {
+    
+    transform: translateX(-100px) translateY(60px);
+    opacity: 100%;
+    
+}
+.nama:hover .k {
+    
+    transform: translateX(0px) translateY(-30px);
+    opacity: 100%;
+    
+}
+.nama:hover .a {
+    
+    transform: translateX(100px) translateY(-120px);
+    opacity: 100%;
+    
+}
+.nama:hover .a2{
+    
+    opacity: 100%;
+    transform: translateX(200px) translateY(-210px);
+    
+}
+
+.nama > div {
+    font-size: 5rem;
     font-weight: bold;
+
+    font-family: sans-serif;
+    text-shadow: 2px  2px  10px  black;
+    color: white;
+
+    
 
 }
 .ketikan {
-    height: 35px;
+    height: 40px;
     position: absolute;
     width: 5px ;
     background-color: black;
     display: inline-block;
     animation: blink .8s infinite ease-in-out;
-    border-radius: 2px;
 }
 .profil {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border: 2px solid;
-    height: 570px;
+
+    padding: 16rem 2rem 16rem 2rem;
+
 }
 .deskripsi-profil {
-    border: 2px solid red;
     width: 450px;
     height: 300px;
     display: flex;
     display: flex;
     flex-direction: column;
-
+    animation: fadeUp 2.5s ease
 }
 
 
 .novemasHeka {
-    border: 2px solid blue;
+
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     height: 300px;
     width: 400px;
-
+    animation: fadeUp 2.5s ease;
 }
 .sosial-media {
     position: relative;
 }
 .youtube , .ig, .facebook {
     display: flex;
-    border: 2px solid;
+
     padding: 5px;
     margin: 5px;
     
@@ -256,6 +356,13 @@ header {
     color: black;
     font-size: small;
     text-decoration: none;
+
+}
+.halaman-main2 {
+    background-color: rgb(200, 240, 255);
+    height: 1000px;
+    position: relative;
+    box-shadow: 0px -20px 200px black;
 
 }
 @keyframes melayang {
@@ -291,6 +398,28 @@ header {
     }
     100% {
         opacity: 0%;
+    }
+}
+@keyframes fadeUp {
+    0%  {
+        opacity: 0;
+        transform: translateY(500px);
+
+    }
+    100%  {
+        opacity: 100%;
+        transform: translateY(0px);
+    }
+}
+@keyframes fadeUpBG {
+    0%  {
+        opacity: 0;
+        transform: translateY(500px);
+
+    }
+    100%  {
+
+        transform: translateY(0px);
     }
 }
 
